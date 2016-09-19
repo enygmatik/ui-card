@@ -1,5 +1,4 @@
 #UI-CARD
-![UI-CARD](https://cldup.com/awC8VCwaWi.png)
+![ui card](https://cldup.com/JM34msw2kj.png)
 > Performance shadow animation
-
 
