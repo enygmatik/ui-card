@@ -32,14 +32,31 @@ body,
   padding: 20px;
   background: #fff;
 }
+.card--loading,
+.card__title:empty,
+.card__paragraph:empty {
+  border-radius: 4px;
+  background: linear-gradient(-90deg, #d1d1d1, #f1f1f1, #d1d1d1) no-repeat;
+  background-size: 200% 200%;
+  animation: card--loading 1.5s infinite;
+}
 .card__title {
   text-transform: uppercase;
   text-align: center;
   font-weight: 300;
 }
+.card__title:empty {
+  width: 100%;
+  height: 15px;
+  margin-bottom: 30px;
+}
 .card__paragraph {
   text-align: center;
   font-weight: 300;
+}
+.card__paragraph:empty {
+  width: 100%;
+  height: 10px;
 }
 .shadow {
   position: relative;
@@ -56,6 +73,7 @@ body,
   width: 100%;
   height: 100%;
   transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
   will-change: opacity;
 }
 .shadow:before {
@@ -82,5 +100,49 @@ body,
 }
 .shadow:active:after {
   opacity: 0;
+}
+@-moz-keyframes card--loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@-webkit-keyframes card--loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@-o-keyframes card--loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes card--loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
